@@ -43,7 +43,7 @@ src/bytebank/
 
 ## Padrão aplicado
 
-`ValidationHandler` define o elo da cadeia. Cada implementação valida uma única responsabilidade e chama `checkNext` quando não encontra erro. `OperationProcessor` monta a ordem dos validadores e só altera o saldo depois que a cadeia inteira aprova a requisição.
+`ValidationHandler` define o elo da cadeia. Cada implementação valida uma única responsabilidade; quando não encontra erro, `validate` encaminha a requisição ao próximo validador. `OperationProcessor` monta a ordem dos validadores e só altera o saldo depois que a cadeia inteira aprova a requisição.
 
 ## Melhorias possíveis
 
